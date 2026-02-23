@@ -13,7 +13,8 @@ interface DynamicCompProps {
 }
 
 export const DynamicComp: React.FC = () => {
-  const { code } = getInputProps() as DynamicCompProps;
+  const props = getInputProps() as DynamicCompProps;
+  const code = props?.code || "";
 
   const [handle] = useState(() => delayRender("Compiling code..."));
   const [Component, setComponent] = useState<React.ComponentType | null>(null);

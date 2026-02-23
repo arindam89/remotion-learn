@@ -92,7 +92,7 @@ function DemoPageContent() {
         </div>
         <div className="h-10 w-px bg-border" />
         <h1 className="text-sm font-medium text-muted-foreground">
-          Example Gallery
+          Animation Editor
         </h1>
       </header>
 
@@ -186,6 +186,7 @@ function DemoPageContent() {
                 isStreaming={false}
                 error={error}
                 code={code}
+                compositionId={selectedExample.id}
               />
             </div>
           </div>

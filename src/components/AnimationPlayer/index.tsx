@@ -34,6 +34,7 @@ interface AnimationPlayerProps {
   error: string | null;
   errorType?: ErrorType;
   code: string;
+  compositionId?: string;
   onRuntimeError?: (error: string) => void;
   onFrameChange?: (frame: number) => void;
 }
@@ -49,6 +50,7 @@ export const AnimationPlayer: React.FC<AnimationPlayerProps> = ({
   error,
   errorType = "compilation",
   code,
+  compositionId = "my-custom-animation",
   onRuntimeError,
   onFrameChange,
 }) => {
@@ -154,6 +156,7 @@ export const AnimationPlayer: React.FC<AnimationPlayerProps> = ({
             code={code}
             durationInFrames={durationInFrames}
             fps={fps}
+            compositionId={compositionId}
           />
           <SettingsModal
             durationInFrames={durationInFrames}

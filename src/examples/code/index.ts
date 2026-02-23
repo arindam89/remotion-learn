@@ -1,8 +1,19 @@
+// ============================================================
+// ANIMATION EXAMPLES REGISTRY
+// ============================================================
+// To add a new animation:
+// 1. Copy my-custom-animation.ts and rename it
+// 2. Edit the animation code and metadata
+// 3. Import it below
+// 4. Add it to the examples array
+// ============================================================
+
 import { animatedShapesExample } from "./animated-shapes";
 import { fallingSpheresExample } from "./falling-spheres";
 import { goldPriceChartExample } from "./gold-price-chart";
 import { histogramExample } from "./histogram";
 import { lottieAnimationExample } from "./lottie-animation";
+import { myCustomAnimationExample } from "./my-custom-animation";
 import { progressBarExample } from "./progress-bar";
 import { textRotationExample } from "./text-rotation";
 import { typewriterHighlightExample } from "./typewriter-highlight";
@@ -18,17 +29,42 @@ export interface RemotionExample {
   category: "Text" | "Charts" | "Animation" | "3D" | "Other";
 }
 
+// ============================================================
+// ANIMATION GALLERY - Add your examples here
+// ============================================================
 export const examples: RemotionExample[] = [
+  // Text Animations
   textRotationExample,
+  typewriterHighlightExample,
+  wordCarouselExample,
+
+  // Charts
   histogramExample,
+  goldPriceChartExample,
+
+  // Animation
   progressBarExample,
   animatedShapesExample,
   lottieAnimationExample,
   fallingSpheresExample,
+
+  // Your Custom Animations (add new ones here)
+  myCustomAnimationExample,
+];
+
+// Export individual examples for use in Root.tsx
+export {
+  animatedShapesExample,
+  fallingSpheresExample,
   goldPriceChartExample,
+  histogramExample,
+  lottieAnimationExample,
+  myCustomAnimationExample,
+  progressBarExample,
+  textRotationExample,
   typewriterHighlightExample,
   wordCarouselExample,
-];
+};
 
 export function getExampleById(id: string): RemotionExample | undefined {
   return examples.find((e) => e.id === id);
