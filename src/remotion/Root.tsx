@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { DynamicComp } from "./DynamicComp";
 import {
   animatedShapesExample,
+  aiAgents101Example,
   fallingSpheresExample,
   goldPriceChartExample,
   histogramExample,
@@ -15,6 +16,7 @@ import {
 } from "../examples/code";
 import {
   AnimatedShapes,
+  AiAgents101,
   FallingSpheres,
   GoldPriceChart,
   Histogram,
@@ -134,6 +136,15 @@ export const RemotionRoot: React.FC = () => {
         component={MyCustomAnimation}
         durationInFrames={myCustomAnimationExample.durationInFrames}
         fps={myCustomAnimationExample.fps}
+        width={1920}
+        height={1080}
+      />
+
+      <Composition
+        id="ai-agents-101"
+        component={AiAgents101}
+        durationInFrames={aiAgents101Example.durationInFrames}
+        fps={aiAgents101Example.fps}
         width={1920}
         height={1080}
       />

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  useCurrentFrame,
-  useVideoConfig,
-  interpolate,
-  spring,
-} from "remotion";
+import { AbsoluteFill } from "remotion";
 import { compileCode } from "./compiler";
 
 // Helper to create a component from code string
@@ -51,6 +45,7 @@ function createComponentFromCode(code: string): React.ComponentType {
 // Pre-compile all examples for CLI rendering
 export const {
   animatedShapesExample: AnimatedShapes,
+  aiAgents101Example: AiAgents101,
   fallingSpheresExample: FallingSpheres,
   goldPriceChartExample: GoldPriceChart,
   histogramExample: Histogram,
@@ -63,6 +58,7 @@ export const {
 } = (() => {
   const {
     animatedShapesExample,
+    aiAgents101Example,
     fallingSpheresExample,
     goldPriceChartExample,
     histogramExample,
@@ -76,6 +72,7 @@ export const {
 
   return {
     animatedShapesExample: createComponentFromCode(animatedShapesExample.code),
+    aiAgents101Example: createComponentFromCode(aiAgents101Example.code),
     fallingSpheresExample: createComponentFromCode(fallingSpheresExample.code),
     goldPriceChartExample: createComponentFromCode(goldPriceChartExample.code),
     histogramExample: createComponentFromCode(histogramExample.code),

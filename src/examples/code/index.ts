@@ -9,6 +9,7 @@
 // ============================================================
 
 import { animatedShapesExample } from "./animated-shapes";
+import { aiAgents101Example } from "./ai-agents-101";
 import { fallingSpheresExample } from "./falling-spheres";
 import { goldPriceChartExample } from "./gold-price-chart";
 import { histogramExample } from "./histogram";
@@ -50,10 +51,12 @@ export const examples: RemotionExample[] = [
 
   // Your Custom Animations (add new ones here)
   myCustomAnimationExample,
+  aiAgents101Example,
 ];
 
 // Export individual examples for use in Root.tsx
 export {
+  aiAgents101Example,
   animatedShapesExample,
   fallingSpheresExample,
   goldPriceChartExample,
